@@ -2,12 +2,9 @@ import json
 from random import choice
 from lxml import objectify
 from eliza import Eliza
-from errbot import botcmd, BotPlugin, PY2
+from errbot import botcmd, BotPlugin
 
-if PY2:
-    from urllib2 import urlopen, quote
-else:
-    from urllib.request import urlopen, quote
+from urllib.request import urlopen, quote
 
 class ElizaBot(BotPlugin):
     eliza_daemon = Eliza()
